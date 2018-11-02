@@ -6,7 +6,7 @@ public class GameBoardGenerator : MonoBehaviour {
 	public GameObject block;
 	public GameObject wall;
 
-	public int boardWidth = 10;
+	static public int boardWidth = 10;
 	public int boardHeight = 10;
 
 	// Use this for initialization
@@ -15,6 +15,9 @@ public class GameBoardGenerator : MonoBehaviour {
 		GameObject floor = Instantiate(wall) as GameObject;
 		GameObject leftWall = Instantiate(wall) as GameObject;
 		GameObject rightWall = Instantiate(wall) as GameObject;
+
+		rightWall.GetComponent<Rigidbody> ();
+		leftWall.GetComponent<Rigidbody> ();
 
 		//Make the 4 walls children of the game board object
 		rightWall.transform.parent = this.transform;
